@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f5f7f5" />
+    <meta
+      name="description"
+      content="Find trusted home appliance repair technicians near you and explore sample appointment availability."
+    />
+    <title>FIXORA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="#home" aria-label="Fixora home">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M14.1 6.4a5.2 5.2 0 0 0-6.8 6.8L3.6 17a2.4 2.4 0 0 0 3.4 3.4l3.8-3.8a5.2 5.2 0 0 0 6.8-6.8l-3.2 3.2-3.4-.6-.6-3.4 3.7-2.6Z" />
+              <path d="m17.6 4.7 1.7 1.7" />
+            </svg>
+          </span>
+          <span class="brand-name">FIXORA<span>.</span></span>
+        </a>
+
+        <nav class="main-nav" aria-label="Main navigation">
+          <a class="nav-link active" href="#home">Find a technician</a>
+          <a class="nav-link" href="#services">Services</a>
+          <a class="nav-link" href="#how-it-works">How it works</a>
+          <a class="nav-link" href="#technicians">FIXORA team</a>
+        </nav>
+
+        <div class="nav-actions">
+          <button class="text-button" id="signInButton" type="button">Sign in</button>
+          <a class="button button-dark nav-cta" href="#find">Book a repair <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </header>
+
+    <main id="home">
+      <section class="hero">
+        <div class="hero-glow" aria-hidden="true"></div>
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <div class="trust-label"><span class="trust-icon">✦</span> HOME REPAIR, WITHOUT THE GUESSWORK</div>
+            <h1>When home breaks,<br />we <span>fix it.</span></h1>
+            <p class="hero-description">
+              Find trusted appliance experts nearby. Compare ratings, see who’s available, and book a time that works for you.
+            </p>
+            <div class="hero-proof">
+              <div class="avatar-stack" aria-hidden="true">
+                <span>JM</span><span>AL</span><span>RC</span><span>+</span>
+              </div>
+              <div class="proof-copy"><strong>4.9/5 average rating</strong><span>from 2,400+ happy homes</span></div>
+              <span class="proof-divider" aria-hidden="true"></span>
+              <span class="proof-online"><i></i> 6 local pros</span>
+            </div>
+          </div>
+
+          <div class="hero-visual" aria-label="Home appliance repair technician">
+            <img
+              class="hero-photo"
+              src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=1100&q=85"
+              alt="Technician carefully repairing a home appliance"
+            />
+            <div class="photo-shade"></div>
+            <div class="visual-caption"><span class="caption-dot"></span><span><strong>Reliable help is closer</strong><small>to home than you think.</small></span></div>
+            <div class="availability-float">
+              <span class="float-check">✓</span>
+              <span><strong>Same-day service</strong><small>Available in your area</small></span>
+              <span class="float-arrow" aria-hidden="true">↗</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="container search-container" id="find">
+          <form class="search-panel" id="searchForm">
+            <label class="search-field location-field" for="locationInput">
+              <span class="field-icon location-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M19 10.2c0 5-7 10-7 10s-7-5-7-10a7 7 0 1 1 14 0Z" /><circle cx="12" cy="10" r="2.3" /></svg>
+              </span>
+              <span class="field-copy"><span class="field-label">YOUR LOCATION</span><input id="locationInput" type="text" value="Brooklyn, NY" placeholder="Enter city or ZIP code" autocomplete="postal-code" /></span>
+              <button class="locate-button" id="locateButton" type="button" aria-label="Use my location" title="Use my location">◎</button>
+            </label>
+            <span class="search-divider" aria-hidden="true"></span>
+            <label class="search-field appliance-field" for="applianceFilter">
+              <span class="field-icon appliance-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><rect x="5" y="3" width="14" height="18" rx="2" /><path d="M5 8h14M8 5.5h.01M11 5.5h.01" /><circle cx="12" cy="14" r="3.2" /></svg>
+              </span>
+              <span class="field-copy"><span class="field-label">WHAT NEEDS FIXING?</span>
+                <select id="applianceFilter" aria-label="Choose an appliance">
+                  <option value="all">All appliances</option>
+                  <option value="Refrigerator">Refrigerator</option>
+                  <option value="Washer">Washer &amp; dryer</option>
+                  <option value="Oven">Oven &amp; range</option>
+                  <option value="Dishwasher">Dishwasher</option>
+                  <option value="HVAC">Heating &amp; cooling</option>
+                </select>
+              </span>
+            </label>
+            <span class="search-divider issue-divider" aria-hidden="true"></span>
+            <label class="search-field issue-field" for="issueFilter">
+              <span class="field-icon issue-icon" aria-hidden="true">✳</span>
+              <span class="field-copy"><span class="field-label">WHAT'S GOING WRONG?</span>
+                <select id="issueFilter" aria-label="Choose the appliance issue" disabled>
+                  <option value="">Choose an appliance first</option>
+                </select>
+              </span>
+            </label>
+            <button class="button button-primary search-submit" type="submit"><span>Find a technician</span><span aria-hidden="true">→</span></button>
+          </form>
+          <div class="estimate-preview" id="estimatePreview" hidden aria-live="polite">
+            <span class="estimate-icon" aria-hidden="true">$</span>
+            <span class="estimate-copy">
+              <strong id="estimateTitle">Typical repair estimate</strong>
+              <span id="estimateDisclaimer">Estimated total including the visit and typical repair work.</span>
+            </span>
+            <span class="estimate-range" id="estimateRange"></span>
+          </div>
+          <p class="search-note"><span aria-hidden="true">⌁</span> Free to browse · No commitment until you book</p>
+        </div>
+      </section>
+
+      <section class="services-section" id="services">
+        <div class="container">
+          <div class="services-heading">
+            <span class="eyebrow">FIXORA HOME SERVICES</span>
+            <h2>Help for the things that keep home running.</h2>
+            <p>Click any service image to preview what the service includes.</p>
+          </div>
+          <div class="service-gallery">
+            <article class="service-card">
+              <button class="service-image-button" type="button" data-service-preview="repair" aria-label="Preview appliance repair">
+                <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Technician repairing a household appliance" />
+                <span class="image-open-hint">Preview service <span aria-hidden="true">↗</span></span>
+              </button>
+              <div class="service-card-copy"><span class="eyebrow">DIAGNOSE &amp; FIX</span><h3>Appliance repair</h3><p>Find help diagnosing and repairing common appliance issues.</p></div>
+            </article>
+            <article class="service-card">
+              <button class="service-image-button" type="button" data-service-preview="maintenance" aria-label="Preview appliance maintenance">
+                <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Technician checking equipment during maintenance" />
+                <span class="image-open-hint">Preview service <span aria-hidden="true">↗</span></span>
+              </button>
+              <div class="service-card-copy"><span class="eyebrow">CARE &amp; PREVENT</span><h3>Maintenance</h3><p>Arrange routine checks and practical care for household equipment.</p></div>
+            </article>
+            <article class="service-card">
+              <button class="service-image-button" type="button" data-service-preview="installation" aria-label="Preview appliance installation">
+                <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Finished home with new appliances installed" />
+                <span class="image-open-hint">Preview service <span aria-hidden="true">↗</span></span>
+              </button>
+              <div class="service-card-copy"><span class="eyebrow">SET UP &amp; CONNECT</span><h3>Installation</h3><p>Request support setting up eligible appliances and home equipment.</p></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="results-section" id="technicians">
+        <div class="container">
+          <div class="section-topline">
+            <div>
+              <span class="eyebrow">YOUR FIXORA TEAM</span>
+              <h2>FIXORA technicians <span class="live-pulse"></span></h2>
+              <p class="section-description">Meet FIXORA group members near <strong id="locationLabel">Brooklyn, NY</strong>. See who can help today.</p>
+            </div>
+            <div class="results-update"><span class="update-pulse"></span> FIXORA group members <span class="update-divider">·</span> Demo availability</div>
+          </div>
+
+          <div class="filter-bar">
+            <div class="availability-tabs" role="group" aria-label="Filter technician availability">
+              <button class="availability-tab active" type="button" data-availability="all" aria-pressed="true">All pros <span id="allCount">6</span></button>
+              <button class="availability-tab" type="button" data-availability="available" aria-pressed="false"><i></i> Available today</button>
+            </div>
+            <div class="filter-controls">
+              <label class="select-wrap"><span class="sr-only">Filter by service</span>
+                <select id="serviceFilter">
+                  <option value="all">All services</option>
+                  <option value="Repair">Repair</option>
+                  <option value="Installation">Installation</option>
+                  <option value="Maintenance">Maintenance</option>
+                </select>
+                <span class="select-chevron" aria-hidden="true">⌄</span>
+              </label>
+              <label class="select-wrap"><span class="sr-only">Sort technicians</span>
+                <select id="sortFilter">
+                  <option value="recommended">Recommended</option>
+                  <option value="rating">Top rated</option>
+                  <option value="price-low">Price: low to high</option>
+                </select>
+                <span class="select-chevron" aria-hidden="true">⌄</span>
+              </label>
+              <button class="map-button" id="mapButton" type="button"><span aria-hidden="true">⌖</span> Map view</button>
+            </div>
+          </div>
+
+          <div class="technician-grid" id="technicianGrid" aria-live="polite"></div>
+          <div class="empty-state" id="emptyState" hidden>
+            <span class="empty-icon" aria-hidden="true">⌕</span>
+            <h3>No technicians match those filters</h3>
+            <p>Try another appliance or availability filter to see more local pros.</p>
+            <button class="button button-outline" id="resetFilters" type="button">Clear filters</button>
+          </div>
+          <div class="more-results"><span>Looking for someone else?</span><button class="text-link" id="showAllButton" type="button">See all local technicians <span aria-hidden="true">→</span></button></div>
+        </div>
+      </section>
+
+      <section class="how-section" id="how-it-works">
+        <div class="container how-inner">
+          <div class="how-intro">
+            <span class="eyebrow">A BETTER WAY TO GET IT FIXED</span>
+            <h2>Good help.<br />No hassle.</h2>
+            <p>From the first search to the final fix, we make home repair feel easy again.</p>
+            <a href="#find" class="how-link">Find your technician <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="steps">
+            <article class="step-card"><span class="step-number">01</span><span class="step-icon" aria-hidden="true">⌕</span><h3>Tell us what’s wrong</h3><p>Choose an appliance and find experienced technicians in your neighborhood.</p></article>
+            <article class="step-card"><span class="step-number">02</span><span class="step-icon" aria-hidden="true">◷</span><h3>Pick a time that fits</h3><p>Compare available visit times and choose one that works with your schedule.</p></article>
+            <article class="step-card"><span class="step-number">03</span><span class="step-icon" aria-hidden="true">✓</span><h3>Get back to normal</h3><p>Your trusted local pro gets it fixed, with clear pricing and no surprises.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="provider-banner" id="providers">
+        <div class="container provider-inner">
+          <div><span class="eyebrow">A TEAM YOU CAN COUNT ON</span><h2>Service from the<br /><span>FIXORA group.</span></h2><p>Browse technicians who are members of the FIXORA team and find the right fit for your home.</p></div>
+          <a class="button button-light" href="#technicians">Meet the team <span aria-hidden="true">↗</span></a>
+          <span class="provider-decoration" aria-hidden="true">✳</span>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <a class="brand footer-brand" href="#home"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M14.1 6.4a5.2 5.2 0 0 0-6.8 6.8L3.6 17a2.4 2.4 0 0 0 3.4 3.4l3.8-3.8a5.2 5.2 0 0 0 6.8-6.8l-3.2 3.2-3.4-.6-.6-3.4 3.7-2.6Z" /><path d="m17.6 4.7 1.7 1.7" /></svg></span><span class="brand-name">FIXORA<span>.</span></span></a>
+        <p>Home repair, made easier. <span>© 2026 Fixora</span></p>
+        <div class="footer-links"><a href="#how-it-works">How it works</a><a href="#providers">Become a pro</a><a href="mailto:hello@fixora.example">Contact</a></div>
+        <nav class="social-links" aria-label="Find Fixora on social media">
+          <span class="social-label">Follow Fixora</span>
+          <a href="https://www.facebook.com/search/top?q=Fixora%20home%20repair" target="_blank" rel="noopener noreferrer" aria-label="Search Facebook for Fixora home repair">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.2 21v-8.2H16l.4-3.2h-3.2V7.5c0-.9.3-1.5 1.6-1.5h1.7V3.2c-.8-.1-1.7-.2-2.5-.2-2.5 0-4.2 1.5-4.2 4.3v2.3H7v3.2h2.8V21h3.4Z" /></svg>
+            <span>Facebook</span>
+          </a>
+          <a href="https://www.tiktok.com/search?q=Fixora%20home%20repair" target="_blank" rel="noopener noreferrer" aria-label="Search TikTok for Fixora home repair">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.5 8.2a7.4 7.4 0 0 1-4.4-1.5v7.1a5.9 5.9 0 1 1-5.1-5.8v3.4a2.6 2.6 0 1 0 1.8 2.5V2.8h3.3c.2 2 1.8 3.6 4.4 3.9v1.5Z" /></svg>
+            <span>TikTok</span>
+          </a>
+          <a href="https://www.youtube.com/results?search_query=Fixora+home+repair" target="_blank" rel="noopener noreferrer" aria-label="Search YouTube for Fixora home repair">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8ZM9.8 15.3V8.7l5.8 3.3-5.8 3.3Z" /></svg>
+            <span>YouTube</span>
+          </a>
+        </nav>
+      </div>
+    </footer>
+
+    <dialog class="booking-dialog" id="bookingDialog" aria-labelledby="bookingTitle">
+      <form class="booking-form" id="bookingForm">
+        <button class="dialog-close" id="closeBooking" type="button" aria-label="Close booking form">×</button>
+        <span class="eyebrow">REQUEST A VISIT</span>
+        <h2 id="bookingTitle">Let’s get it fixed.</h2>
+        <p class="booking-subtitle" id="bookingTechnician"></p>
+        <label class="dialog-label" for="bookingAppliance">What needs attention?</label>
+        <select id="bookingAppliance" required>
+          <option value="">Select your appliance</option>
+          <option value="Refrigerator">Refrigerator</option><option value="Washer">Washer &amp; dryer</option><option value="Oven">Oven &amp; range</option><option value="Dishwasher">Dishwasher</option><option value="HVAC">Heating &amp; cooling</option><option value="Other">Other</option>
+        </select>
+        <label class="dialog-label" for="bookingIssue">What is it doing?</label>
+        <select id="bookingIssue" required disabled>
+          <option value="">Choose an appliance first</option>
+        </select>
+        <label class="dialog-label" for="bookingDetails">Anything else the technician should know? <span>(optional)</span></label>
+        <textarea id="bookingDetails" rows="3" maxlength="500" placeholder="Add a few details about the problem"></textarea>
+        <label class="dialog-label" for="bookingSlot">Choose an available visit</label>
+        <select id="bookingSlot" required></select>
+        <label class="dialog-label" for="bookingEmail">Your email</label>
+        <input id="bookingEmail" type="email" placeholder="Sign in to continue" required autocomplete="email" readonly />
+        <p class="booking-account" id="bookingAccount"></p>
+        <div class="booking-estimate" id="bookingEstimate" hidden aria-live="polite">
+          <div><span class="booking-estimate-label">ESTIMATED TOTAL</span><strong id="bookingEstimateRange"></strong></div>
+          <p id="bookingEstimateNote">Includes the visit and typical repair work. Final price is confirmed after diagnosis.</p>
+        </div>
+        <button class="button button-primary booking-submit" type="submit">Request this visit <span aria-hidden="true">→</span></button>
+        <p class="booking-disclaimer">Estimate only—not a quote. Your technician will confirm the repair price before starting work.</p>
+      </form>
+    </dialog>
+
+    <dialog class="booking-dialog auth-dialog" id="authDialog" aria-labelledby="authTitle">
+      <button class="dialog-close auth-close" id="closeAuth" type="button" aria-label="Close account form">×</button>
+      <form class="booking-form" id="loginForm">
+        <span class="eyebrow">WELCOME TO FIXORA</span>
+        <h2 id="authTitle">Sign in to continue</h2>
+        <p class="booking-subtitle">Sign in is required before a booking request.</p>
+        <label class="dialog-label" for="loginEmail">Email</label>
+        <input id="loginEmail" type="email" autocomplete="email" required maxlength="254" />
+        <label class="dialog-label" for="loginPassword">Password</label>
+        <input id="loginPassword" type="password" autocomplete="current-password" required minlength="8" maxlength="128" />
+        <button class="button button-primary booking-submit" type="submit">Sign in</button>
+        <p class="auth-switch">New to FIXORA? <button class="text-link" id="showRegister" type="button">Register</button></p>
+        <p class="auth-message" id="loginMessage" role="status"></p>
+        <p class="booking-disclaimer">Demo only: account details last for this page session. Do not use a real password.</p>
+      </form>
+      <form class="booking-form" id="registerForm" hidden>
+        <span class="eyebrow">JOIN FIXORA</span>
+        <h2>Create your account</h2>
+        <p class="booking-subtitle">Register before submitting your booking.</p>
+        <label class="dialog-label" for="registerName">Full name</label>
+        <input id="registerName" type="text" autocomplete="name" required maxlength="100" />
+        <label class="dialog-label" for="registerEmail">Email</label>
+        <input id="registerEmail" type="email" autocomplete="email" required maxlength="254" />
+        <label class="dialog-label" for="registerPassword">Password</label>
+        <input id="registerPassword" type="password" autocomplete="new-password" required minlength="8" maxlength="128" />
+        <button class="button button-primary booking-submit" type="submit">Create account</button>
+        <p class="auth-switch">Already registered? <button class="text-link" id="showLogin" type="button">Sign in</button></p>
+        <p class="auth-message" id="registerMessage" role="status"></p>
+        <p class="booking-disclaimer">Demo only: account details last for this page session. Do not use a real password.</p>
+      </form>
+    </dialog>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
